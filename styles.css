@@ -1,0 +1,60 @@
+body {
+    margin: 0;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    background-color: #25274D;
+    background-image: url(images/abstract-white-geometric-background-free-vector.jpg);
+    background-size: cover;
+    background-blend-mode: multiply;
+    background-repeat: no-repeat;
+}
+h1 {
+    font-size: 275%;
+    font-weight: 600;
+    margin: 3%;
+    cursor: default;
+}
+input {
+    text-align: center;
+    height: 36px;
+    width: 36px;
+    border-radius: 10%;
+    border: 1px solid #29648a;
+}
+.box {
+    text-align: center;
+}
+.r {
+    margin: 3px;
+}
+.feedback {
+    font-weight: 600;
+    padding: 1%;
+    color: red;
+}
+.btns {
+    margin: 10px;
+}
+.btn {
+    margin: 15px 23px;
+}
+.addgap{
+    margin-top: 10px;
+}
+.rightgap{
+    margin-right: 5px;
+}
+/* To remove up and down arrow buttons in input box of input type "number" */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input {
+    background-color: #EDF5E1;
+}
+.fa-solid {
+    height: 20px;
+    width: 20px;
+}

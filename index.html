@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sudoku Solver</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/6aa493f54d.js" crossorigin="anonymous"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="container-fluid">
+
+        <h1>SUDOKU SOLVER</h1>
+
+        <div class="box">
+            <div class="r">
+                <input type="number" name="" id="00" min="1" max="9" autocomplete="off">
+                <input type="number" name="" id="01" min="1" max="9" autocomplete="off">
+                <input type="number" name="" id="02" min="1" max="9" autocomplete="off" class="rightgap">
+                <input type="number" name="" id="03" min="1" max="9" autocomplete="off">
+                <input type="number" name="" id="04" min="1" max="9" autocomplete="off">
+                <input type="number" name="" id="05" min="1" max="9" autocomplete="off" class="rightgap">
+                <input type="number" name="" id="06" min="1" max="9" autocomplete="off">
+                <input type="number" name="" id="07" min="1" max="9" autocomplete="off">
+                <input type="number" name="" id="08" min="1" max="9" autocomplete="off">
+            </div>
+            <div class="r">
+                <input type="number" name="" id="10" min="1" max="9" autocomplete="off">
+                <input type="number" name="" id="11" min="1" max="9" autocomplete="off">
+                <input type="number" name="" id="12" min="1" max="9" autocomplete="off" class="rightgap">
+                <input type="number" name="" id="13" min="1" max="9" autocomplete="off">
+                <input type="number" name="" id="14" min="1" max="9" autocomplete="off">
+                <input type="number" name="" id="15" min="1" max="9" autocomplete="off" class="rightgap">
+                <input type="number" name="" id="16" min="1" max="9" autocomplete="off">
+                <input type="number" name="" id="17" min="1" max="9" autocomplete="off">
+                <input type="number" name="" id="18" min="1" max="9" autocomplete="off">
+            </div>
+            <div class="r">
+                <input type="number" name="" id="20" min="1" max="9" autocomplete="off">
+                <input type="number" name="" id="21" min="1" max="9" autocomplete="off">
+                <input type="number" name="" id="22" min="1" max="9" autocomplete="off" class="rightgap">
+                <input type="number" name="" id="23" min="1" max="9" autocomplete="off">
+                <input type="number" name="" id="24" min="1" max="9" autocomplete="off">
+                <input type="number" name="" id="25" min="1" max="9" autocomplete="off" class="rightgap">
+                <input type="number" name="" id="26" min="1" max="9" autocomplete="off">
+                <input type="number" name="" id="27" min="1" max="9" autocomplete="off">
+                <input type="number" name="" id="28" min="1" max="9" autocomplete="off">
+            </div>
+            <div class="r addgap" >
+                <input type="number" name="" id="30" min="1" max="9" autocomplete="off">
+                <input type="number" name="" id="31" min="1" max="9" autocomplete="off">
+                <input type="number" name="" id="32" min="1" max="9" autocomplete="off" class="rightgap">
+                <input type="number" name="" id="33" min="1" max="9" autocomplete="off">
+                <input type="number" name="" id="34" min="1" max="9" autocomplete="off">
+                <input type="number" name="" id="35" min="1" max="9" autocomplete="off" class="rightgap">
+                <input type="number" name="" id="36" min="1" max="9" autocomplete="off">
+                <input type="number" name="" id="37" min="1" max="9" autocomplete="off">
+                <input type="number" name="" id="38" min="1" max="9" autocomplete="off">
+            </div>
+            <div class="r">
+                <input type="number" name="" id="40" min="1" max="9" autocomplete="off">
+                <input type="number" name="" id="41" min="1" max="9" autocomplete="off">
+                <input type="number" name="" id="42" min="1" max="9" autocomplete="off" class="rightgap">
+                <input type="number" name="" id="43" min="1" max="9" autocomplete="off">
+                <input type="number" name="" id="44" min="1" max="9" autocomplete="off">
+                <input type="number" name="" id="45" min="1" max="9" autocomplete="off" class="rightgap">
+                <input type="number" name="" id="46" min="1" max="9" autocomplete="off">
+                <input type="number" name="" id="47" min="1" max="9" autocomplete="off">
+                <input type="number" name="" id="48" min="1" max="9" autocomplete="off">
+            </div>
+            <div class="r">
+                <input type="number" name="" id="50" min="1" max="9" autocomplete="off">
+                <input type="number" name="" id="51" min="1" max="9" autocomplete="off">
+                <input type="number" name="" id="52" min="1" max="9" autocomplete="off" class="rightgap">
+                <input type="number" name="" id="53" min="1" max="9" autocomplete="off">
+                <input type="number" name="" id="54" min="1" max="9" autocomplete="off">
+                <input type="number" name="" id="55" min="1" max="9" autocomplete="off" class="rightgap">
+                <input type="number" name="" id="56" min="1" max="9" autocomplete="off">
+                <input type="number" name="" id="57" min="1" max="9" autocomplete="off">
+                <input type="number" name="" id="58" min="1" max="9" autocomplete="off">
+            </div>
+            <div class="r addgap">
+                <input type="number" name="" id="60" min="1" max="9" autocomplete="off">
+                <input type="number" name="" id="61" min="1" max="9" autocomplete="off">
+                <input type="number" name="" id="62" min="1" max="9" autocomplete="off" class="rightgap">
+                <input type="number" name="" id="63" min="1" max="9" autocomplete="off">
+                <input type="number" name="" id="64" min="1" max="9" autocomplete="off">
+                <input type="number" name="" id="65" min="1" max="9" autocomplete="off" class="rightgap">
+                <input type="number" name="" id="66" min="1" max="9" autocomplete="off">
+                <input type="number" name="" id="67" min="1" max="9" autocomplete="off">
+                <input type="number" name="" id="68" min="1" max="9" autocomplete="off">
+            </div>
+            <div class="r">
+                <input type="number" name="" id="70" min="1" max="9" autocomplete="off">
+                <input type="number" name="" id="71" min="1" max="9" autocomplete="off">
+                <input type="number" name="" id="72" min="1" max="9" autocomplete="off" class="rightgap">
+                <input type="number" name="" id="73" min="1" max="9" autocomplete="off">
+                <input type="number" name="" id="74" min="1" max="9" autocomplete="off">
+                <input type="number" name="" id="75" min="1" max="9" autocomplete="off" class="rightgap">
+                <input type="number" name="" id="76" min="1" max="9" autocomplete="off">
+                <input type="number" name="" id="77" min="1" max="9" autocomplete="off">
+                <input type="number" name="" id="78" min="1" max="9" autocomplete="off">
+            </div>
+            <div class="r">
+                <input type="number" name="" id="80" min="1" max="9" autocomplete="off">
+                <input type="number" name="" id="81" min="1" max="9" autocomplete="off">
+                <input type="number" name="" id="82" min="1" max="9" autocomplete="off" class="rightgap">
+                <input type="number" name="" id="83" min="1" max="9" autocomplete="off">
+                <input type="number" name="" id="84" min="1" max="9" autocomplete="off">
+                <input type="number" name="" id="85" min="1" max="9" autocomplete="off" class="rightgap">
+                <input type="number" name="" id="86" min="1" max="9" autocomplete="off">
+                <input type="number" name="" id="87" min="1" max="9" autocomplete="off">
+                <input type="number" name="" id="88" min="1" max="9" autocomplete="off">
+            </div>
+        </div>
+
+        <div class="feedback" hidden><p>NOT VALID</p></div>
+        <div class="btns">
+            <button type="button" class="btn btn-primary">Generate</button>
+            <button type="button" class="btn btn-success">Solve</button>
+            <button type="button" class="btn btn-light"><i class="fa-solid fa-rotate"></i> Reset</button>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
